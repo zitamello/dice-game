@@ -1,5 +1,7 @@
 'use strict';
 
+const player0Element = document.querySelector('.player--0');
+const player1Element = document.querySelector('.player--1');
 //selecting the ID using #
 const score0Element = document.querySelector('#score--0');
 //same as before but using getElementById
@@ -12,7 +14,9 @@ const btnNew = document.querySelector('.btn-new');
 const btnRoll = document.querySelector('.btn-roll');
 const btnHold = document.querySelector('.btn-hold');
 
-let currentScore = 0; 
+const scores = [0, 0];
+let currentScore = 0;
+let activePlayer = 0;
 //starting conditions to 0
 score0Element.textContent = 0;
 score0Element.textContent = 0;
@@ -32,11 +36,13 @@ btnRoll.addEventListener('click', function(){
     if(dice !== 1){
         //add dice to the current score 
         currentScore += dice;
-        current0Element.textContent = currentScore; 
+        document.getElementById(`current--${activePlayer}`).textContent = currentScore;
     } else {
+        document.getElementById(`current--${activePlayer}`).textContent = 0;
         currentScore = 0;
-        current0Element.textContent = 0;
-
+        activePlayer = activePlayer === 0 ? 1 : 0;
+        player0Element.classList.toggle('player--active');
+        player1Element.classList.toggle('player--active');
     }
 
 })
