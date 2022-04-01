@@ -89,7 +89,6 @@ const init = function(){
     player0Element.classList.add('player--active'); 
     player1Element.classList.remove('player--winner');
     player1Element.classList.remove('player--loser');
-    player1Element.classList.add('player--active');
 }
 
 init();
