@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dice Game! 🎲</title>
+    <title>Blackjack Dice Game! 🎲</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,6 +27,31 @@
         </section>
 
         <img src="dice6.png" alt="Playing dice" class="dice" />
+        <button class="btn show-modal">📑Tutorial</button>
+        <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <h1>Vamos jogar Blackjack! 🎲 </h1>
+            <p>Blackjack é um famoso jogo de Casino também conhecido como 21! </p>
+            <br>
+            <p> O objetivo final deste jogo é o jogador obter exatos 21 pontos com o rolar dos dados. </p>
+            <br>
+            <p> Para começar, clique em Roll Dice, o dado será rolado e você obterá a quantidade de pontos equivalente,
+                para cada Roll Dice que você clicar, os pontos serão somados. </p>
+            <br>
+            <p> <span>Se você passar de 21 pontos, você PERDE o jogo!</span></p>
+            <p> <span>Se você fizer exatos 21 pontos, você GANHA o jogo!</span> </p>
+            <br>
+            <p> Porém, este jogo possui um revés, <span>caso o dado rolado caia em 1, você perderá todos os pontos obtidos e
+                passará a vez.</span></p>
+            <br>
+            <p> Caso você esteja satisfeito com a quantidade de pontos obtidos na rodada, você pode clicar no botão HOLD.
+                O botão fará com que seus pontos acumulados seja totalizados na sua mão e você passará a vez para o próximo jogador.
+                (Que pode ser você mesmo ou seu amiguinho do lado! 🎎)</p>
+            </p>
+            <br>
+            <p>Boa sorte!</p>
+        </div>
+        <div class="overlay hidden"></div>
         <button class="btn btn-new">🔁 New Game </button>
         <button class="btn btn-roll">🎲 Roll Dice</button>
         <button class="btn btn-hold">🕹 Hold </button>
